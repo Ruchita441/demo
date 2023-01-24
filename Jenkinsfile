@@ -10,5 +10,11 @@ pipeline {
         git branch: 'main' , url: 'https://github.com/Ruchita441/demo.git' 
       }
     }
+    stage('Unit Testing'){
+      
+      steps{
+        sh 'mvn test'
+      }
+    }
   }
 } 
