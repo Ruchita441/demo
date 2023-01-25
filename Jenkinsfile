@@ -47,12 +47,15 @@ pipeline {
                }
             }
          }
-    stage('Upload war file to nexus'){
-      steps{           
-        script{ 
-          nexusArtifactUploader artifacts: [[artifactId: 'springboot', classifier: '', file: 'target/Uber.jar', type: 'jar']], credentialsId: 'nexus-auth2', groupId: 'com.example', nexusUrl: '13.233.229.55:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'demoapp', version: '1.0.0'
-                 }
-               }
-            }
        
 }
+
+  stage('Upload war file to nexus'); {
+    steps; {
+      script; {
+        nexusArtifactUploader[[artifactId, 'springboot', classifier, '', file, 'target/Uber.jar', type, 'jar']], credentialsId; 'nexus-auth2', groupId; 'com.example', nexusUrl; '13.233.229.55:8081', nexusVersion; 'nexus3', protocol; 'http', repository; 'demoapp', version; '1.0.0'
+      }
+    }
+  }
+}
+
